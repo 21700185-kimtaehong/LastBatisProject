@@ -45,10 +45,32 @@
       <tr><td>식당명</td><td><form:input path="name" /></td></tr>
       <tr><td>분류</td><td><form:input path="type" /></td></tr>
       <tr><td>주소</td><td><form:input path="location" /></td></tr>
-      <tr><td>휴업일</td><td><form:input path="dayoff" /></td></tr>
+      <tr><td>휴업일</td>
+        <td>
+          <form:select path="dayoff">
+            <form:option value="월요일" label="월요일" />
+            <form:option value="화요일" label="화요일" />
+            <form:option value="수요일" label="수요일" />
+            <form:option value="목요일" label="목요일" />
+            <form:option value="금요일" label="금요일" />
+            <form:option value="토요일" label="토요일" />
+            <form:option value="일요일" label="일요일" />
+            <form:option value="없음" label="없음" />
+            <form:option value="공휴일만" label="공휴일만" />
+          </form:select>
+        </td>
+      </tr>
       <tr><td>대표음식</td><td><form:input path="representative" /></td></tr>
-      <tr><td>별점</td><td><form:input path="grade" /></td></tr>
-      <tr><td>한줄평</td><td><form:input path="evaluation" /></td></tr>
+      <tr><td>별점</td>
+        <td>
+          <form:radiobutton path="grade" value="1" /> 1점
+          <form:radiobutton path="grade" value="2" /> 2점
+          <form:radiobutton path="grade" value="3" /> 3점
+          <form:radiobutton path="grade" value="4" /> 4점
+          <form:radiobutton path="grade" value="5" /> 5점
+        </td>
+      </tr>
+      <tr><td>한줄평</td><td><form:textarea rows="5" cols="10" path="evaluation" /></td></tr>
       <tr><td>사진</td><td><form:input path="picture" /></td></tr>
 <%--      사진 넣어야함--%>
     </table>

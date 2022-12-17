@@ -41,13 +41,33 @@
             <tr><td>식당명</td><td><input type="text" name="name" /></td></tr>
             <tr><td>분류</td><td><input type="text" name="type" /></td></tr>
             <tr><td>주소</td><td><input type="text" name="location" /></td></tr>
-            <tr><td>휴업일</td><td><input type="text" name="dayoff" /></td></tr>
+            <tr><td>휴업일</td><td>
+                <select name="dayoff">
+                    <option value="월요일" label="월요일">월요일</option>
+                    <option value="화요일" label="화요일">화요일</option>
+                    <option value="수요일" label="수요일">수요일</option>
+                    <option value="목요일" label="목요일">목요일</option>
+                    <option value="금요일" label="금요일">금요일</option>
+                    <option value="토요일" label="토요일">토요일</option>
+                    <option value="일요일" label="일요일">일요일</option>
+                    <option value="없음" label="없음">없음</option>
+                    <option value="공휴일만" label="공휴일만">공휴일만</option>
+                </select>
+            </td></tr>
             <tr><td>대표메뉴</td><td><input type="text" name="representative" /></td></tr>
-            <tr><td>별점</td><td><input type="number" name="grade" /></td></tr>
-            <tr><td>한줄평</td><td><input type="text" name="evaluation" /></td></tr>
+            <tr><td>별점</td>
+                <td>
+                    <input type="radio" name="grade" value="1" /> 1점
+                    <input type="radio" name="grade" value="2" /> 2점
+                    <input type="radio" name="grade" value="3" /> 3점
+                    <input type="radio" name="grade" value="4" /> 4점
+                    <input type="radio" name="grade" value="5" /> 5점
+                </td>
+            </tr>
+            <tr><td>한줄평</td><td><textarea name="evaluation" rows="5" cols="10"></textarea></td></tr>
             <tr><td>사진</td><td><input type="text" name="picture" value="dd.PNG" /></td></tr>
         </table>
-        <button type="button" onclick="location.href=list">취소</button>
+        <button type="button" onclick="history.back()">취소</button>
         <button type="submit">식당 추가</button>
     </form>
 </body>
